@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #youtube{
+            background-color: rgb(218, 15, 15);
+            color: white;
+            border : none ; 
+            height: 36px;
+            width: 100px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: opacity 0.1s;
+          }
+        #youtube:hover/*hover is a pseudo class*/{
+            opacity: 0.3;
+        }
+        #youtube:active/*active is also a pseudo class*/{
+            opacity: 0.4;
+        }
+        #join{
+            background-color: white;
+            color: blue ;
+            border : blue solid 2px ;
+            border-radius: 5px ; 
+            width: 70px;
+            height: 36px;
+            margin-left: 8px;
+            transition : background-color 1s , color 1s ;
+        }
+        #join:hover{
+            background-color: blue;
+            color : white
+        }
+        #join:active{
+             opacity: 0.4;
+        }
+        #twitter{
+            background-color: rgb(41, 6, 247);
+            font-family:monospace;
+            border: none ; 
+            border-radius: 30px;
+            margin-left: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            height: 36px;
+            width: 74px ;
+            color: white;
+            cursor: pointer;
+            transition: box-shadow 0.15s;
+           
+        }
+        #twitter:hover{
+            box-shadow: 10px 5px 5px rgba(0, 0 , 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <button id = "youtube">SUBSCRIBE</button>
+    <button id = "join">JOIN</button>
+    <button id =  "twitter">Tweet</button>
+</body>
+</html>
