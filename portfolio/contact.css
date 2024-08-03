@@ -1,0 +1,14 @@
+#contact{
+    height: 100vh;
+    width: 100% ;
+}
+.email , .phone {
+    height: 50px ;
+}
+.convo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top : 5% ; 
+    
+}

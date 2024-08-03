@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel = "icon" type = "image/png" href="leaf.jpg">
+    <style>
+         body{
+
+            height: 100vh ;
+            width: 100% ;
+            background-image: url(leaf.jpg);
+            display: grid ;
+            align-items: center;
+            justify-content: center;
+
+            
+
+        }
+        p{
+            display: inline-block ;
+            color: white ;
+            
+        }
+         *{
+           margin : 0 ; 
+           padding : 0 ; 
+        }
+        .login{
+            position: relative;
+            background-color:  #1BBA93  ;
+            background : rgba(255, 255, 255, 0.1)  ;
+            width: 500px ;
+            height:  570px ;
+            border-radius: 20px ;
+            backdrop-filter: blur(5px);
+            border: 1px solid white ;
+            box-shadow: 3px 4px 10px rgba(255 ,255 , 255,1 ) , -3px -4px 10px rgba(255 ,255 , 255,1 );
+        }
+        .header{
+            text-align: center ;
+        }
+        .header > p{
+            margin : 15px 0px ; 
+            font-size: large ;
+            font-weight: 700 ;
+            font-family: arial ;
+            position: relative;
+            color: whitesmoke;
+        }
+        .box1{
+            margin-top : 10x ; 
+            width : 100% ; 
+            background : rgba(255, 255, 255, 0)  ; 
+            height: 59vh ;
+            backdrop-filter: blur(5px);
+            display: flex ;
+            flex-direction: column;
+        }
+        .top{
+            display: flex ;
+            gap : 10px ; 
+            padding-top: 15px ;
+        
+        }
+        .f-name , .enter{
+            display: block ;
+        }
+        .enter{
+            width: 100% ;
+            height: 25px ;
+            border: 1px solid #1BBA93;
+            background : rgba(255, 255, 255, 0.3)  ;
+            
+        }
+        .enter::placeholder{
+            padding-left : 5px ; 
+            color : rgb(219, 212, 212)
+        }
+        .enter:focus{
+           outline: none ;
+           border: 2px solid whitesmoke;
+           color : white ;
+           padding-left: 5px ;
+        }
+        .first{
+            flex : 1 ; 
+            margin-left : 2% ; 
+        }
+        .last{
+            flex : 1 ; 
+            margin-right: 3% ;
+        }
+        .f-name{
+            font-size : 15px ; 
+            font-family: arial;
+            color: white ;
+        }
+        .email{
+            margin-left : 2% ; 
+            margin-top: 2% ;
+        }
+        .email > .enter{
+            width: 97% ;
+        }
+        .down{
+            display: flex ;
+            gap : 25%  ; 
+            padding-top: 15px ;
+            padding-left: 2%  ;
+        }
+        .check{
+            display: flex ;
+            justify-content: space-evenly;
+        }
+        .area{
+            width : 97%;
+            height: 9vh  ;
+            background : rgba(255, 255, 255, 0.3)  ;
+        }
+        .area:focus{
+            outline: none ; 
+            border: 1px solid #1BBA93 ;
+        }
+        .sub{
+            position: absolute;
+            bottom: 2% ;
+            left : 75%; 
+            
+        }
+        .submit{ 
+            padding: 10px 10px 10px 10px ;
+            border-radius: 6px ;
+            width: 101px ;
+            transition: background-color 0.15s , color 0.15s , border 0.15s ;
+
+        
+        }
+        .submit:hover{
+            background-color: #1BBA93;
+            color: white ;
+            border : 1px solid white ; 
+        }
+        input[type = "submit"]{
+            font-size: 15px ;
+            font-weight: 700 ;
+            color: #1BBA93 ;
+            background-color: white ; 
+            border: 1px solid #1BBA93;
+        }
+        .slider {
+            -webkit-appearance: none; /* Removes default styling for WebKit browsers */
+            appearance: none;
+            border-radius: 25px ;
+            width: 100%;
+            height: 5px; /* Track height */
+            
+            background: whitesmoke; /* Track color */
+            outline: none; /* Removes outline */
+            opacity: 0.7; /* Transparency */
+            transition: opacity .2s; /* Transition for when the user hovers over the slider */
+        }
+        .slider:hover {
+            opacity: 1; /* Full opacity on hover */
+        }
+
+        /* Styling for WebKit browsers */
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Removes default styling */
+            appearance: none;
+            width: 25px; /* Thumb width */
+            height: 25px; /* Thumb height */
+            background: #4CAF50; /* Thumb color */
+            cursor: pointer; /* Cursor change on hover */
+            border-radius: 50%; /* Round thumb */
+            border: 1px solid white ;
+        }
+        
+       
+        @media (min-width : 300px) and (max-width : 500px){
+            .login{
+                height: 70vh ;
+                width: 90% ;
+                left: 5% ; 
+            }
+            .submit{
+                width: 90% ;
+                height: 30px ;
+                padding: 1px 9px 1px 6px ;
+            }
+            .sub{
+                bottom: 1% ;
+                right: 2% ;
+            }
+            input[type = "submit"]{
+                font-size: 13px ;
+            }
+           .down{
+            display: flex ;
+            justify-content: space-between; 
+           }
+
+           .radio > p{
+            font-size: 12px ;
+           }
+           .check > p{
+            font-size: 11px ;
+           }
+           input[type = "radio"]{
+              
+              height: 10px ;
+           }
+           input[type = "checkbox"]{
+            height: 10px ;
+           }
+           .area{
+            height: 50px  ;
+           }
+           .box1{
+            height: 58vh;
+           }
+
+        }
+      
+      
+       
+       
+       
+     
+    </style>
+   
+</head>
+<body>
+    <div class="contain">
+        <div class="login"> 
+            <div class="header">
+                 <p>CREATE ACCOUNT</p>
+                 <div class="sub">
+                    <input type="submit" class = "submit" value="Create">
+                 </div>
+                 
+            </div>
+            <div class="box1">
+                    <div class="top">
+                        <div class="first">
+                            <label class = "f-name">First Name*</label>
+                            <input type = "text" placeholder="Enter" class = "enter">
+                        </div>
+                        <div class="last">
+                            <label class = "f-name">Last Name* </label>
+                            <input type = "text" placeholder="Enter" class = "enter">
+                        </div>
+                    </div>
+                    <div class="email">
+                        <label class = "f-name">Email*</label>
+                       <input type = "email" placeholder="Email" class = "enter">
+                    </div>
+                    <div class="top">
+                        <div class="first">
+                            <label class = "f-name">Password*</label>
+                            <input type = "password" placeholder="Password" class = "enter">
+                        </div>
+                        <div class="last">
+                            <label class = "f-name">Confirm Password* </label>
+                            <input type = "password" placeholder="Confirm password" class = "enter">
+                        </div>
+                    </div>
+                     <div class="down">
+                        <div class="radio">
+                            <label class = "f-name">Gender*</label>
+                            <input type = "radio"  name = "gen" required>
+                            <p>Male</p>
+                            <input type = "radio"  name = "gen" required >
+                            <p>Female</p>
+                            
+                            
+                        </div>
+                        <div class="last">
+                            <label class = "f-name">Hobbies* </label>
+                            <div class="check">
+                                <input type = "checkbox"  class = "radio">
+                                <p>Music</p>
+                                <input type = "checkbox"  class = "radio">
+                                <p>Sports</p>
+                                <input type = "checkbox"  class = "radio">
+                                <p>Travel</p>
+                                <input type = "checkbox"  class = "radio">
+                                <p>Movies</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="first">
+                            <label class = "f-name">Source of Income*</label>
+                            <input type = "number" placeholder="income" class = "enter">
+                        </div>
+                        <div class="last">
+                            <label class = "f-name">Income* </label>
+                            <input type = "range" class = "slider" min="0" max="100" value="20">
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="first">
+                            <label class = "f-name">file*</label>
+                            <input type = "file" class = "enter">
+                        </div>
+                        <div class="last">
+                            <label class = "f-name">Age* </label>
+                            <input type = "text" placeholder="Enter" class = "enter">
+                        </div>
+                    </div>
+                    <div class="email">
+                        <label class = "f-name">Bio*</label>
+                        <textarea  class = "area"></textarea>
+                    </div>
+                    
+                   
+                    
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
